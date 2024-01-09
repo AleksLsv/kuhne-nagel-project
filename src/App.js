@@ -1,25 +1,76 @@
-import logo from './logo.svg';
 import './App.css';
+import Header from './components/Header';
+import Footer from './components/Footer'
+import React from 'react';
+import { connect } from 'react-redux';
+import { addShipment, deleteShipment, fetchShipmentsData } from './actions/actionCreators';
+import { Route, Routes } from "react-router-dom";
+import ShipmentsTable from "./components/ShipmentsTable";
+import DetailsForm from "./components/DetailsForm";
+import Preloader from "./components/common/Preloader";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+class App extends React.Component {
+
+
+  componentDidMount() {
+    this.props.fetchShipmentsData();
+  }
+
+
+  render() {
+    const { loading, ...restProps } = this.props;
+
+    return (
+
+      <div className="app-wrapper">
+        <Routes>
+          <Route path="/" element={<Header />} />
+        </Routes>
+
+        <main className='main'>
+          <div className='container'>
+
+            {(loading) ? (
+              <Preloader />
+            ) : (
+              <Routes>
+
+                <Route path="/" element={<ShipmentsTable {...restProps}
+                  onDelete={this.props.deleteShipment} />} />
+
+                <Route path="/form" element={<DetailsForm onDelete={this.props.deleteShipment}
+                  onAddShipment={this.props.addShipment} />} />
+
+              </Routes>
+            )}
+
+          </div>
+        </main>
+
+        <Routes>
+          <Route path="/" element={<Footer />} />
+        </Routes>
+
+      </div>
+    );
+  }
 }
 
-export default App;
+function mapStateToProps(state) {
+  const { error, loading, shipments, loadedFromFile } = state.shipmentsR;
+  return {
+    error,
+    loading,
+    shipments,
+    loadedFromFile,
+  };
+}
+
+export default connect(mapStateToProps, {
+  fetchShipmentsData,
+  deleteShipment,
+  addShipment
+})(App);
+
+

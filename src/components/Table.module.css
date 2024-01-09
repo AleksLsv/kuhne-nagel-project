@@ -1,0 +1,122 @@
+
+.loaded p {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 30px;
+}
+
+.errorNoData {
+  color: red;
+  font-weight: 700;
+}
+
+.fromFile {
+  color: blue;
+}
+
+.fromServer {
+  color: green;
+}
+
+
+.table {
+  width: 100%;
+  border: none;
+  border-radius: 5px;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+
+.table thead th {
+  font-weight: bold;
+  text-align: left;
+  border: none;
+  padding: 10px 15px;
+  background: #d8d8d8;
+  font-size: 14px;
+  vertical-align: middle;
+  text-transform: uppercase;
+  height: 55px;
+}
+
+.table tbody td {
+  text-align: left;
+  border: none;
+  padding: 15px;
+  font-size: 14px;
+  vertical-align: middle;
+}
+
+.table tbody tr:nth-child(even) {
+  background: #f3f3f3;
+}
+
+.table tr td:first-child {
+  width: 15%;
+}
+
+.table tr td:nth-child(2) {
+  width: 8%;
+}
+
+.table tr td:nth-child(4) {
+  width: 19%;
+}
+
+.table tr td:nth-child(5) {
+  width: 7%;
+}
+
+
+.table tbody tr td:last-child {
+  width: 11%;
+}
+
+
+.table button {
+  border: 1px solid black;
+  border-radius: 4px;
+  padding: 4px 15px;
+}
+
+.table button:first-child {
+  background-color: deepskyblue;
+}
+
+.table button:last-child {
+  background-color: #f44336;
+}
+
+.table img {
+  width: 12px;
+  height: 12px;
+}
+
+.table_btns {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+.link_and_table{
+  position: relative;
+}
+
+.add_data {
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 700;
+  color: #f44336;
+  border: 1px solid black;
+  padding: 10px;
+  background-color: lightyellow;
+  border-radius: 4px;
+  margin-bottom: 30px;
+  text-transform: none;
+  position: absolute;
+  right: 5px;
+  top: 5px;
+}

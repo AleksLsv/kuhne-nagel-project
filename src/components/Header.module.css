@@ -1,0 +1,105 @@
+@font-face {
+  font-family: 'SuisseIntl';
+  src: url('../../public/css/SuisseIntl-Regular.ttf') format('ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.task ul {
+  list-style: circle;
+  margin-bottom: 20px;
+}
+
+.task li{
+  margin-bottom: 5px;
+}
+
+.task ul:last-child {
+  margin-bottom: 0;
+}
+
+.task p {
+  margin-bottom: 10px;
+}
+
+
+.header {
+  padding: 10px 0;
+  border-bottom: solid 1px #000;
+  background-color: ghostwhite;
+  font-family: 'SuisseIntl', sans-serif;
+  margin-bottom: 30px;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+.logo__img {
+  width: 297px;
+}
+
+.header__inner {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
+  position: relative;
+  /* z-index: 1; */
+}
+
+.title {
+  justify-self: center;
+}
+
+.title__name {
+  font-size: 24px;
+  text-transform: uppercase;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.title__author {
+  font-size: 18px;
+}
+
+.task_btn {
+  font-size: 20px;
+  justify-self: right;
+  position: relative;
+  padding: 15px;
+}
+
+
+
+
+.task {
+
+  display: block;
+  position: absolute;
+  font-size: 16px;
+  top: 85px;
+  /* z-index: 2; */
+  background-color: white;
+  max-width: 800px;
+  right: 0;
+  padding: 20px;
+  border: 1px solid black;
+  border-radius: 5px;
+  opacity: 1;
+  transition: opacity 0.3s ease;
+
+  /* transform: translateX(0%); */
+}
+
+.task.hidden {
+  /* display: none; */
+  opacity: 0;
+  pointer-events: none;
+  max-height: 0;
+  overflow: hidden;
+}
+
+.task__close_btn {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+}

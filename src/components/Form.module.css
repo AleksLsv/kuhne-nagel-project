@@ -1,0 +1,68 @@
+.details {
+  position: relative;
+}
+
+.details_link_back {
+  position: absolute;
+  right: 0;
+  top: 10px;
+  cursor: pointer;
+  font-size: 20px;
+  color: red;
+  font-weight: 600;
+  padding: 10px;
+  background-color: lightyellow;
+  border: 1px solid black;
+  border-radius: 4px;
+}
+
+h2 {
+  font-size: 24px;
+  margin: 30px 10px 30px;
+  text-transform: uppercase;
+}
+
+label {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+input {
+  padding: 10px 15px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  background-color: aliceblue;
+  font-size: 16px;
+}
+
+
+.form {
+  border-top: 1px solid grey;
+  border-bottom: 1px solid grey;
+  margin-top: 50px;
+}
+
+.form_list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.form__list_item {
+  flex-basis: 550px;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 30px;
+}
+
+.form_btn {
+  font-size: 20px;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid black;
+  border-radius: 5px;
+  background-color: aquamarine;
+  font-weight: 700;
+  margin-right: 30px;
+}
