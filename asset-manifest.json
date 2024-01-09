@@ -1,0 +1,19 @@
+{
+  "files": {
+    "main.css": "/kuhne-nagel-project/static/css/main.b9f7610f.css",
+    "main.js": "/kuhne-nagel-project/static/js/main.89e89e91.js",
+    "static/js/787.75185a3e.chunk.js": "/kuhne-nagel-project/static/js/787.75185a3e.chunk.js",
+    "static/media/SuisseIntl-Regular.ttf": "/kuhne-nagel-project/static/media/SuisseIntl-Regular.d1a6a5b0cd76d384f42f.ttf",
+    "static/media/Preloader.gif": "/kuhne-nagel-project/static/media/Preloader.20a21d3c5d14bc614403.gif",
+    "index.html": "/kuhne-nagel-project/index.html",
+    "static/media/close.svg": "/kuhne-nagel-project/static/media/close.eb3a670aa2ecf8817a796158566bb902.svg",
+    "static/media/delete.svg": "/kuhne-nagel-project/static/media/delete.93437e9cd22c554b766a3225d6d19a9c.svg",
+    "main.b9f7610f.css.map": "/kuhne-nagel-project/static/css/main.b9f7610f.css.map",
+    "main.89e89e91.js.map": "/kuhne-nagel-project/static/js/main.89e89e91.js.map",
+    "787.75185a3e.chunk.js.map": "/kuhne-nagel-project/static/js/787.75185a3e.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.b9f7610f.css",
+    "static/js/main.89e89e91.js"
+  ]
+}
