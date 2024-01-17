@@ -65,48 +65,55 @@ function DetailsForm({ onAddShipment, onDelete }) {
             <label htmlFor="orderNo">order No</label>
             <input type="text" id="orderNo" value={formData.orderNo}
               placeholder="XX-xxxxxx-xxxxxxxx-xxxxxxx"
-              onChange={(e) => handleChange(e, "orderNo")}>
-            </input>
+              onChange={(e) => handleChange(e, "orderNo")} />
           </li>
 
           <li className={styles.form__list_item} key="date">
             <label htmlFor="date">date</label>
             <input type="text" id="date" value={formData.date}
               placeholder="mm/dd/yyyy"
-              onChange={(e) => handleChange(e, "date")}>
-            </input>
+              onChange={(e) => handleChange(e, "date")} />
           </li>
 
           <li className={styles.form__list_item} key="customer">
             <label htmlFor="customer">customer</label>
             <input type="text" id="customer" value={formData.customer}
               placeholder="company name"
-              onChange={(e) => handleChange(e, "customer")}>
-            </input>
+              onChange={(e) => handleChange(e, "customer")} />
           </li>
 
           <li className={styles.form__list_item} key="trackingNo">
             <label htmlFor="trackingNo">tracking No</label>
             <input type="text" id="trackingNo" value={formData.trackingNo}
               placeholder="XX-xxxxxx-xxxxxxxx-xxxxxxx"
-              onChange={(e) => handleChange(e, "trackingNo")}>
-            </input>
+              onChange={(e) => handleChange(e, "trackingNo")} />
           </li>
 
           <li className={styles.form__list_item} key="consignee">
             <label htmlFor="consignee">consignee</label>
             <input type="text" id="consignee" value={formData.consignee}
               placeholder="company name"
-              onChange={(e) => handleChange(e, "consignee")}>
-            </input>
+              onChange={(e) => handleChange(e, "consignee")} />
           </li>
 
-          <li className={styles.form__list_item} key="status">
+          {/* <li className={styles.form__list_item} key="status">
             <label htmlFor="status">status</label>
             <input type="text" id="status" value={formData.status}
               placeholder="'Shipped, Delivered or In Transit'"
+              onChange={(e) => handleChange(e, "status")}/>
+          </li> */}
+
+          <li className={styles.form__list_item} key="status">
+            <label htmlFor="status">status</label>
+            <select id="status" value={formData.status}
               onChange={(e) => handleChange(e, "status")}>
-            </input>
+              <option value="" disabled hidden>
+                Select status
+              </option>
+              <option value="'Shipped'">Shipped</option>
+              <option value="'Delivered'">Delivered</option>
+              <option value="'In Transit'">In Transit</option>
+            </select>
           </li>
 
         </ul>
